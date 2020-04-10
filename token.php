@@ -4,9 +4,9 @@
         $json = json_decode(file_get_contents('php://input'), true);
         $ch = curl_init();
 
-        $orderId = "231313132";//$json["orderId"];
-        $orderAmount = "100";//$json["orderAmount"];
-        $type = "TEST";//$json["type"]
+        $orderId = $json["orderId"];
+        $orderAmount = $json["orderAmount"];
+        $type = $json["type"];
 
 
         curl_setopt($ch, CURLOPT_URL, 'https://test.cashfree.com/api/v2/cftoken/order');
